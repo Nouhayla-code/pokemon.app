@@ -16,6 +16,8 @@ const Quagsire = {
   weaknesses: "Grass",
   gender: "male and female",
   canEvolve: true,
+  type:"Water ground",
+  generation: 2,
   image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/195.png",
 };
 
