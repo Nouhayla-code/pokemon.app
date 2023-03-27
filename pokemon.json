@@ -11,5 +11,11 @@
   "canEvolve": true,
   "type": "Water ground",
   "generation": 2,
+  "statsHp":6,
+  "statsAttack":5,
+  "statsDefence":5,
+  "statsSpecielAttack":4,
+  "statsSpecialDefence":4,
+  "statsSpeed":3,
   "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/195.png"
 }

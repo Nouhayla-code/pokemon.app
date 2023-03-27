@@ -27,7 +27,6 @@ const Quagsire = {
 // subtype: tekst
 
 
-
 // generation: tal
 // spilversion: tekst
 
