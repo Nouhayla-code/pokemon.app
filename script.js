@@ -2,6 +2,11 @@
 
 window.addEventListener("load", initApp);
 
+async function initApp(){
+  const pokemons=await getPokemons();
+  showPokemons();
+}
+
 const Quagsire = {
   pokeName: "Quagsire",
   description:
