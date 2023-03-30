@@ -3,6 +3,7 @@ body {
   margin: 0em;
   cursor: url(billede/pokeball.png);
   background-color:  rgb(59, 59, 224);;
+  text-align: center;
 }
 
 #background {
@@ -21,7 +22,7 @@ html {
 }
 
 h1 {
-  font-size: 10em;
+  font-size: 3em;
   font-weight: 500;
   letter-spacing: 0.1px;
   text-align: center;
@@ -54,18 +55,23 @@ header {
   right: 0;
   z-index: 9999;
   background-color: rgb(59, 59, 224);
+  font-size: 3em;
+  font-family: 'Pokemon Solid', sans-serif;
+  color: #f5ed04;
 
 }
 
 /* ---------- main page styling ---------- */
 main {
   background: var(--light-green);
-  /* padding: 137px 0 0; */
+
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
+  backdrop-filter: blur(5px);
+  cursor: grab;
   gap: 1em;
   padding: 1em;
 }
@@ -96,25 +102,31 @@ main {
   background-color: var(--white);
   cursor: pointer;
   text-align: center;
+  background-color: transparent
 }
 
 .grid-item:hover {
   box-shadow: 0 8px 16px 0 var(--green);
+  background-color: #f5ed04;
 }
 
 .grid-item img {
   width: 100%;
   height: 60%px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .grid-item p {
   margin: 0.3em 0;
 }
 
-#close-btn {
+button {
+  font-weight: 300;
   font-size: 1em;
   text-align: center;
+  cursor: pointer;
+  border:none;
+  border-radius: 0;
   color: var(--text-color-light);
   background-color: var(--green);
   letter-spacing: 0.05em;
@@ -122,8 +134,7 @@ main {
   padding: 0.5em 1em;
   width: 100%;
   max-width: 380px;
-  display: grid;
-  margin: auto;
+  
 }
 
 .dialog-grid {
@@ -138,9 +149,40 @@ main {
 .pokemon-info-img {
   width: 100%;
 }
+#pokemon-ul{
+display: block;
+margin-left: 40%;
+top: 30%;
+position:absolute
+
+}
 
 #pokemon-info {
-  width: 40vw;
+  width: 10%;
+
+}
+#pokemon-details img{
+  width: 50%;
+  margin-right: 50%;
+
+}
+
+#pokemon-footprint {
+  position: absolute;
+  width: 2vw;
+  right: 2vw;
+  top: 2vw;
+}
+
+#pokemon-stats {
+  position: absolute;
+  top: 10vw;
+  left: 25vw;
+}
+
+#pokemon-description {
+  display: block;
+  padding-top: 30vw;
 }
 footer {
   text-align: center;

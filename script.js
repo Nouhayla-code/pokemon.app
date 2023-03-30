@@ -1,5 +1,7 @@
 "use strict";
 
+let pokemon;
+
 window.addEventListener("load", initApp);
 
 async function initApp() {
@@ -10,6 +12,7 @@ async function initApp() {
     showPokemon(pokemon);
   }
 }
+
 
 async function fetchJSON(url) {
   const response = await fetch(url);
@@ -23,7 +26,7 @@ function showPokemon(pokemon) {
     <article class="grid-item">
         <img src="${pokemon.image}">
         <h2>${pokemon.name}</h2>
-        <p>${pokemon.type}</p>
+        <p>${pokemon.dexindex}</p>
     </article>`;
   document
     .querySelector("#pokemon")
@@ -38,22 +41,23 @@ function showPokemon(pokemon) {
 function clickPokemon(pokemon) {
   const id = `pokemon-info-${pokemon.name}`;
   const detailHTML = /*html*/ `
-    <article id="${id}">
+    <article id="pokemon-grid2">
       <h1>${pokemon.name}</h1>
       <img class=pokemon-info-img src="${pokemon.image}">
       <h3>"${pokemon.description}"</h3>
+      <ul id="pokemon-ul">
       <li>Footprint: <img class="footprint"src="${pokemon.footprint}"></li>
       <li>Ability: ${pokemon.ability}</li>
       <li>Type: ${pokemon.type}</li>
       <li>Subtype: ${pokemon.subtype}</li>
       <li>Weaknesses: ${pokemon.weaknesses}</li>
-      <li>Gender: ${pokemon.gender}</li>
       <li>Weight: ${pokemon.weight} grams</li>
       <li>Height: ${pokemon.height} centimeters</li>
       <li>Generation: ${pokemon.generation}</li>
       <li>Game version: ${pokemon.spilversion}</li>
-      <li>Can it evolve: ${pokemon.canEvolve}</li>
       <li>HP: ${pokemon.statsHP}</li>
+      </ul>
+      <button id="close-btn">Close</button>
     </article>`;
   document
     .querySelector("#pokemon-details")
@@ -70,14 +74,3 @@ function closeDialog() {
   document.querySelector("#pokemon-info-" + pokemon.name).remove();
 }
 
-function showGeneration() {
-  // implementation goes here
-}
-
-function showTyping() {
-  // implementation goes here
-}
-
-function getDescription() {
-  // implementation goes here
-}
